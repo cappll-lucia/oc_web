@@ -11,7 +11,7 @@
 		align-items: center;
 	}
 	.menu {
-		background-color: #022c66;
+		background-color: #1f28a1;
 		color: #deefe7;
 		height: 2.8rem;
 		display: flex;
@@ -19,21 +19,21 @@
 		justify-content: space-around;
 		align-items: center;
 		li {
-			padding: 0 0.8rem;
-			font-size: 0.9rem;
+			padding: 0.8rem;
+			font-size: 0.8rem;
 			height: 2.8rem;
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 			letter-spacing: 1px;
 		}
 		li:hover {
-			border-bottom: 0.4rem solid #118c46;
+			border-bottom: 0.4rem solid #1daa5a;
 		}
 	}
 }
 
 .menu-responsive {
-	background-color: #022c66;
+	background-color: #1f28a1;
 	height: 2rem;
 	display: none;
 }
@@ -41,16 +41,16 @@
 	display: none;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 960px) {
 	.navbar .menu {
 		height: 2.6rem;
 		li {
 			height: 2.6rem;
-			font-size: 0.7rem;
+			font-size: 0.67rem;
 		}
 	}
 }
-@media (max-width: 700px) {
+@media (max-width: 840px) {
 	.navbar .menu {
 		height: 2.5rem;
 		li {
@@ -59,7 +59,7 @@
 		}
 	}
 }
-@media (max-width: 700px) {
+@media (max-width: 776px) {
 	.navbar .menu {
 		height: 2.3rem;
 		li {
@@ -69,7 +69,7 @@
 	}
 }
 
-@media (max-width: 545px) {
+@media (max-width: 687px) {
 	.navbar .menu {
 		display: none;
 	}
@@ -84,7 +84,8 @@
 		}
 	}
 	.menu-list-flex {
-		background-color: #022c66;
+		z-index: 2000;
+		background-color: #1f28a1;
 		width: 100%;
 		display: flex;
 		justify-content: flex-start;
@@ -99,13 +100,12 @@
 			color: #deefe7;
 			width: 100%;
 			padding: 2rem 0 0 2rem;
-			a{
-				padding: 0 1rem;;
+			a {
+				padding: 0 1rem;
 			}
 		}
 		li:hover a {
-			
-			border-bottom: 0.4rem solid #118c46;
+			border-bottom: 0.4rem solid #1daa5a;
 		}
 	}
 }

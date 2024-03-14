@@ -5,15 +5,7 @@ import Image from 'next/image.js';
 import { useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 
-const links: { label: string; path: string }[] = [
-	{ label: 'Anteojos Recetados', path: '/anteojosRecetados' },
-	{ label: 'Anteojos de Sol', path: '/anteojosSol' },
-	{ label: 'Contactología', path: '/contactologia' },
-	{ label: 'Audiología', path: '/audiologia' },
-	{ label: 'Fotografía', path: '/fotografia' },
-];
-
-export default function Navbar() {
+export default function Navbar({ navigationItems }: { navigationItems: { label: string; path: string }[] }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
@@ -24,7 +16,7 @@ export default function Navbar() {
 				</Link>
 			</div>
 			<div className='menu'>
-				{links.map(({ label, path }) => (
+				{navigationItems.map(({ label, path }) => (
 					<li key={path}>
 						<Link href={path}>{label.toLocaleUpperCase()}</Link>
 					</li>
@@ -40,7 +32,7 @@ export default function Navbar() {
 				</button>
 			</div>
 			<div className={` ${isOpen ? 'menu-list-flex' : 'menu-list-hidden'}`}>
-				{links.map(({ label, path }) => (
+				{navigationItems.map(({ label, path }) => (
 					<li key={path}>
 						<Link href={path}>{label.toLocaleUpperCase()}</Link>
 					</li>
