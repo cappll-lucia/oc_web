@@ -1,0 +1,117 @@
+.services-gallery {
+	display: flex;
+	flex-direction: row;
+	height: 500px;
+	padding: 4rem;
+	background-color: #1f28a1;
+	.title {
+		font-size: 3.5rem;
+		flex-wrap: wrap;
+		width: 300px;
+		font-weight: 700;
+		font-family: 'Poppins', sans-serif;
+		color: #2ad6c5ce;
+		text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 6px 12px rgba(0, 0, 0, 0.08);
+	}
+	.gallery {
+		margin-left: 2rem;
+		height: 400px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			'img1 img2 img2 img3'
+			'img4 img5 img6 img6';
+		grid-gap: 15px;
+		.services-gallery-img {
+			display: flex;
+			justify-content: end;
+			align-items: end;
+			border-radius: 15px;
+			background-size: cover;
+			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 6px 12px rgba(0, 0, 0, 0.08);
+			.link {
+				padding: 0.5rem 0.8rem;
+				text-align: right;
+				font-weight: 600;
+				color: rgb(142, 11, 65);
+				color: rgb(57, 57, 70);
+			}
+		}
+	}
+}
+
+@mixin bg-position($position) {
+	background-position: $position;
+}
+
+$galeria-serv: (
+	img1: url(../../../public/services-gallery-receta.jpg),
+	img2: url(../../../public/services-gallery-contacto.jpg),
+	img3: url(../../../public/services-gallery-audifo.jpg),
+	img4: url(../../../public/services-gallery-sol.jpeg),
+	img5: url(../../../public/services-gallery-img.jpg),
+	img6: url(../../../public/services-gallery-industrial.jpg),
+);
+
+@each $img, $url in $galeria-serv {
+	.services-gallery-#{$img} {
+		grid-area: $img;
+		background-image: $url;
+		@if (($img==img1) or ($img==img5)) {
+			@include bg-position(center);
+		} @else if (($img==img2) or ($img==img6)) {
+			@include bg-position(top);
+		} @else if ($img==img4) {
+			@include bg-position(right);
+		} @else if ($img==img3) {
+			@include bg-position(center);
+		}
+	}
+}
+@media (max-width: 991px) {
+	.services-gallery {
+		height: 600px;
+		.title {
+			font-size: 2.5rem;
+			// background-color: rebeccapurple;
+		}
+	}
+}
+
+@media (max-width: 842px) {
+	.services-gallery {
+		flex-direction: column;
+		height: 1200px;
+		.title {
+			width: 100%;
+			font-size: 3rem;
+			text-align: center;
+			padding-bottom: 2rem;
+		}
+		.gallery {
+			margin-left: 0;
+			height: 1000px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			grid-template-areas:
+				'img1 img4'
+				'img2 img2'
+				'img3 img5'
+				'img6 img6';
+			grid-gap: 15px;
+			.gallery--img .btn {
+				margin: 200px 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.services-gallery {
+		padding: 2rem 1.5rem;
+		margin-top: -3rem;
+	}
+}
