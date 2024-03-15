@@ -1,0 +1,82 @@
+.home-prods-news {
+	position: relative;
+	top: 0;
+	background-color: #a1ff6a;
+	background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2315c5b5' fill-opacity='0.42'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-size: contain;
+	width: 100%;
+	margin-top: 0px;
+	background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2315c5b5' fill-opacity='0.42'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	.content {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
+		h1 {
+			font-size: 4rem;
+			color: #1a217c;
+			font-weight: 700;
+		}
+		.products-card-section {
+			width: 100%;
+			padding: 1rem 4rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			min-height: 400px;
+		}
+	}
+}
+
+@media (max-width: 925px) and (min-width: 801px) {
+	.products-card-section {
+		padding: 1rem 2rem !important;
+	}
+}
+
+@media (max-width: 700px) {
+	.products-card-section {
+		padding: 1rem 2rem !important;
+	}
+}
+@media (max-width: 600px) {
+	.products-card-section {
+		padding: 1rem 3rem !important;
+	}
+}
+@media (max-width: 500px) {
+	.home-prods-news .content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+	.products-card-section {
+		padding: 1rem 2rem !important;
+	}
+}
+@media (max-width: 450px) {
+	.products-card-section {
+		padding: 3rem 2rem !important;
+		justify-content: center !important;
+	}
+}
+@media (max-width: 400px) {
+	.home-prods-news .content h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 350px) {
+	.products-card-section {
+		padding: 3rem 1rem !important;
+		justify-content: center !important;
+	}
+}
+
+@media (max-width: 280px) {
+	.home-prods-news .content h1 {
+		font-size: 2.3rem;
+	}
+}

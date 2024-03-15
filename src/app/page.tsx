@@ -1,5 +1,8 @@
 import './global.css';
+import { products } from '../../public/products.js';
+import type { Product } from '@/api/entities.js';
 import HomeGallery from '@/components/HomeGallery';
+import HomeProductsNews from '@/components/HomeProductsNews';
 
 export default function Home() {
 	return (
@@ -24,6 +27,13 @@ export default function Home() {
 				</div>
 			</div>
 			<HomeGallery />
+			{/* <div className='news-products'>
+				{products.map((prod: Product) => {
+					return <p>{prod.name}</p>;
+				})}
+			</div> */}
+
+			<HomeProductsNews />
 		</>
 	);
 }
