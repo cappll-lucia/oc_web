@@ -1,0 +1,58 @@
+.sol-page {
+	padding: 1rem 3rem;
+	.title {
+		font-size: 2rem;
+		color: #1a217c;
+		font-weight: 700;
+	}
+	.warn {
+		font-style: oblique;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		color: red;
+		span {
+			margin: 0.5rem 0 0 0.5rem;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@media (max-width: 830px) {
+	.sol-page {
+		padding: 2rem;
+	}
+}
+@media (max-width: 662px) {
+}
+@media (max-width: 586px) {
+	.sol-page {
+		padding: 2rem 1rem;
+		.title {
+			font-size: 1.5rem;
+		}
+	}
+}
+@media (max-width: 440px) {
+	.sol-page {
+		padding: 2rem 1rem;
+		.title {
+			font-size: 1.3rem;
+			text-align: center;
+		}
+		.warn span {
+			font-size: 0.7rem;
+		}
+	}
+}
+@media (max-width: 372px) {
+	.sol-page {
+		padding: 2rem 1rem;
+		.title {
+			font-size: 1.3rem;
+		}
+		.warn span {
+			font-size: 0.6rem;
+		}
+	}
+}
