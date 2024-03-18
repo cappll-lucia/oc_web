@@ -1,7 +1,8 @@
+import { json } from 'stream/consumers';
 import './cardProduct.scss';
 import type { Product } from '@/api/entities.js';
 
-const getImageUrl = (url: string) => `${process.env.VITE_API_URL}/products/image/${url}`;
+const getImageUrl = (url: string) => `http://localhost:3001/api/products/image/${url}`;
 const getBackgroundStyle = (background: any) => {
 	if (background.startsWith('#')) {
 		return { backgroundColor: background };
@@ -31,8 +32,8 @@ export default function CardProduct({ product }: { product: Product }) {
 				<span className='brand'>{product.brand.name}</span>
 				<div className='colors'>
 					{product.colors.map((color: any) => {
-						if (color.name != '---') {
-							return <div style={getBackgroundStyle(color.background)}></div>;
+						if (color.name != '----') {
+							return <div style={getBackgroundStyle(color.background)} key={color.color}></div>;
 						}
 					})}
 				</div>

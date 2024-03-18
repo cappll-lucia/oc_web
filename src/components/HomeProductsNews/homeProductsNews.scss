@@ -20,10 +20,10 @@
 		}
 		.products-card-section {
 			width: 100%;
-			padding: 1rem 4rem;
+			padding: 1rem 3rem;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: space-around;
 			flex-wrap: wrap;
 			min-height: 400px;
 		}
@@ -43,7 +43,7 @@
 }
 @media (max-width: 600px) {
 	.products-card-section {
-		padding: 1rem 3rem !important;
+		padding: 1rem 2rem !important;
 	}
 }
 @media (max-width: 500px) {
@@ -51,9 +51,6 @@
 		font-size: 3rem;
 		margin-bottom: 1rem;
 		margin-top: 1rem;
-	}
-	.products-card-section {
-		padding: 1rem 2rem !important;
 	}
 }
 @media (max-width: 450px) {
